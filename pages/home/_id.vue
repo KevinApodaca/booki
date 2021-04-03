@@ -14,7 +14,7 @@
     <div v-for="review in reviews" :key="review.objectID">
       <img :src="review.reviewer.image"/><br/>
       {{ review.reviewer.name }}<br/>
-      {{ review.date }}<br/>
+      {{ formatDate(review.date) }}<br/>
       {{ review.comment }}<br/>
     </div>
 
@@ -41,6 +41,12 @@ export default {
     return {
       home: homeResponse.json,
       reviews: reviewResponse.json.hits,
+    }
+  },
+  methods: {
+    formatDate(dateStr) {
+      const date = new Date(dateStr)
+      return date.toLocaleDateString(undefined, { month: 'long', year: 'numeric'})
     }
   }
 }
