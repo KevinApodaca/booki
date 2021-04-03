@@ -8,11 +8,8 @@
 
 <script>
 import homes from '~/data/homes'
-import HomeCard from '~/components/HomeCard'
+
 export default {
-  components: {
-    HomeCard
-  },
   data(){
     return {
       homes: homes.slice(0,3)
