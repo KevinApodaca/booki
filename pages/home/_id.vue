@@ -1,5 +1,14 @@
 <template>
-  <div>{{ home.title }}</div>
+  <div>
+    <div style="display:flex;">
+      <img v-for="image in home.images" :key="image" alt="Listing Image" :src="image" width="200" height="150"/>
+    </div>
+    {{ home.title }}<br/>
+    ${{ home.pricePerNight }} / night <br/>
+    {{ home.location.address }} {{ home.location.city }}, {{ home.location.state }}, {{ home.location.country }}<br/>
+    {{ home.reviewValue }}<br/>
+    {{ home.guests }} guests, {{ home.bedrooms }} rooms, {{ home.beds }} beds, {{ home.bathrooms }}, bathrooms <br/>
+    </div>
 </template>
 
 <script>
