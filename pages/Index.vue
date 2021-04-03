@@ -10,7 +10,17 @@
 import homes from '~/data/homes'
 
 export default {
-  data(){
+  head() {
+    return {
+      title: 'Booki',
+      meta: [{
+        name: 'description',
+        content: 'Booki Homepage!',
+        hid: 'description'
+      }]
+    }
+  },
+  data() {
     return {
       homes: homes.slice(0,3)
     }
