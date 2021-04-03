@@ -20,7 +20,7 @@ export default {
     return {
       title: this.home.title,
       script: [{
-        src:`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_PUBLIC_API}&libraries=places`,
+        src:"https://maps.googleapis.com/maps/api/js?key=AIzaSyBkiqgTpJ-t6BAsIbIeGcFKVnQH5bl5bp0&libraries=places",
         hid: "map",
         defer: true,
       }]
