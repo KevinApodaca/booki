@@ -1,9 +1,9 @@
 <template>
-  <div>
+<div>
   <div v-for="home in homes" :key="home.objectID" style="float:left; margin:10px ">
-    <home-card :home="home"/>
+    <nuxt-link :to="`/home/${home.objectID}`" no-prefetch><home-card :home="home"/></nuxt-link>
   </div>
-  </div>
+</div>
 </template>
 
 <script>
