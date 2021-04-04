@@ -55,7 +55,14 @@ export default function(context, inject) {
       zoom: 18,
       center: new window.google.maps.LatLng(lat, lng),
       disableDefaultUI: true,
-      zoomControl: true
+      zoomControl: true,
+      styles: [{
+        featureType: 'poi.business',
+        elementType: 'labels.icon',
+        stylers: [{
+          visibility: 'off'
+        }]
+      }]
     }
     const map = new window.google.maps.Map(canvas, mapOptions)
     if(!markers) {
