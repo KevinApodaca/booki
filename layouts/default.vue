@@ -12,10 +12,11 @@
            <img src="/images/icons/search.svg"/>
          </button>
       </div>
-    </header>
-    <header style="background-color:#eee;">
-      <nuxt-link to="/">Home</nuxt-link>
-      <input type="text" ref="citySearch" @changed="changed"/>
+      <div class="app-user-menu">
+        <img src="/images/icons/house.svg"/>
+        <div class="name">Host</div>
+        <img src="/images/user.jpg" class="avatar"/>
+      </div>
     </header>
     <nuxt/>
   </div>
