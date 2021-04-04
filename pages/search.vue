@@ -1,9 +1,7 @@
 <template>
   <div>
     {{ lat }} / {{ lng }} / {{ label }}<br/>
-    <div v-for="home in homes" :key="home.objectID">
-      {{ home.title }}<br/>
-    </div>
+    <HomeRow v-for="home in homes" :key="home.objectID" :home="home"/>
   </div>
 </template>
 <script>
