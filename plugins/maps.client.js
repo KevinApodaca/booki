@@ -78,7 +78,7 @@ export default function(context, inject) {
         position,
         label: {
           text: `$${home.pricePerNight}`,
-          className: 'marker',
+          className: `marker home-${home.id}`,
         },
         icon: 'https://maps.gstatic.com/mapfiles/transparent.png',
       })
