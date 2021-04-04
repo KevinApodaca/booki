@@ -1,4 +1,5 @@
 export default {
+  target: 'static',
   components: true,
   head: {
     titleTemplate: "Booki Listings: %s",
