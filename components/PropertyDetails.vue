@@ -8,7 +8,7 @@
           {{ home.location.address }} {{ home.location.city }}, {{ home.location.state }}, {{ home.location.country }}
         </div>
         <div class="app-rating">
-          {{ home.reviewValue }}<span>{{ home.reviewCount }}</span>
+          {{ home.reviewValue }} <span>({{ home.reviewCount }})</span>
         </div>
       </div>
       <div class="app-property-details-footer">
