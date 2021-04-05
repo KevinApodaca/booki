@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import formatDate from '~/utils/formatDate'
 export default {
   head() {
     return {
@@ -60,10 +61,7 @@ export default {
     }
   },
   methods: {
-    formatDate(dateStr) {
-      const date = new Date(dateStr)
-      return date.toLocaleDateString(undefined, { month: 'long', year: 'numeric'})
-    }
+    formatDate
   }
 }
 </script>
