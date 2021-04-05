@@ -11,9 +11,14 @@
               <p class="app-testimonial-name">
                 {{ review.reviewer.name }}
               </p>
+              <p class="app-testimonial-date">
+                {{ formatDate(review.date) }}
+              </p>
             </div>
           </div>
-          <div class="app-testimonial-body"></div>
+          <div class="app-testimonial-body">
+            <short-text :text="review.comment" :target="150"/>
+          </div>
         </div>
       </div>
     </div>
@@ -21,12 +26,16 @@
 </template>
 
 <script>
+import formatDate from '~/utils/formatDate'
 export default {
   props: {
     reviews: {
       type: Array,
       required: true,
     }
+  },
+  methods: {
+    formatDate,
   }
 }
 </script>
