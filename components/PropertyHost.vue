@@ -5,20 +5,32 @@
       <div><img :src="user.image"/></div>
       <div>
         <div class="app-host-name">{{ user.name }}</div>
+        <div class="app-host-date">Joined on {{ formatDate(user.joined) }}</div>
+        <div class="app-flex">
+          <div class="app-host-reviews">
+            {{ user.reviewCount }} reviews
+          </div>
+        </div>
       </div>
     </div>
-    <div class="app-host-description"></div>
+    <div class="app-host-description">
+      {{ user.description }}
+    </div>
   </div>
 </div>
 </template>
 
 <script>
+import formatDate from '~/utils/formatDate'
 export default {
   props: {
     user: {
       type: Object,
       required: true,
     }
+  },
+  methods: {
+    formatDate,
   }
 }
 </script>
