@@ -3,6 +3,7 @@
     <PropertyGallery :images="home.images"/>
     <PropertyDetails :home="home"/>
     <PropertyDescription :home="home"/>
+    <PropertyMap :home="home"/>
 
     <div style="display:flex;">
       <img v-for="image in home.images" :key="image" alt="Listing Image" :src="image" width="200" height="150"/>
