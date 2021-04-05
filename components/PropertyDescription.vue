@@ -7,7 +7,9 @@
         <div class="app-description">{{ home.description }}</div>
         </div>
       <div class="app-padded-vertical">
-        <div v-for="(feature, index) in home.features" :key="index" class="app-tag"></div>
+        <div v-for="(feature, index) in home.features" :key="index" class="app-tag">
+          {{ feature }}
+        </div>
       </div>
     </div>
   </div>
